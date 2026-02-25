@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Gravity</title>
+    <link>https://example.org/posts/</link>
+    <description>Recent content in Posts on Gravity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Feb 2026 18:09:45 +0100</lastBuildDate>
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Gravity: How a Lunchtime Conversation Sparked My VR Locomotion Project</title>
+      <link>https://example.org/posts/the-idea/</link>
+      <pubDate>Wed, 25 Feb 2026 18:09:45 +0100</pubDate>
+      <guid>https://example.org/posts/the-idea/</guid>
+      <description>&lt;p&gt;This project idea actually started over lunch with my dad. I was explaining that we’d been assigned to develop a unique locomotion technique for VR in one of my classes, and I told him about my first idea — a Human: Fall Flat-inspired movement system. He didn’t seem too impressed (probably because he didn’t quite follow the game mechanics) and, being the physicist that he is, suggested something different: localized gravity.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
