@@ -10,24 +10,24 @@
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gravitational Interaction</title>
-      <link>https://example.org/posts/gravitational-interaction/</link>
+      <link>https://example.org/posts/implementation/gravitational-interaction/</link>
       <pubDate>Mon, 09 Mar 2026 15:23:05 +0100</pubDate>
-      <guid>https://example.org/posts/gravitational-interaction/</guid>
-      <description>&lt;p&gt;Once the core physics were verified, the project moved from a single-script test into a functional VR traversal system. This required building a robust &amp;ldquo;hand&amp;rdquo; system and a way to manage the state of the world&amp;rsquo;s gravity.&lt;/p&gt;&#xA;&lt;h1 id=&#34;spawning-and-controlling-the-spheres&#34;&gt;Spawning and Controlling the Spheres&lt;/h1&gt;&#xA;&lt;p&gt;I implemented two spawners Blue (Right) and Red (Left), each managing one gravity sphere. In my final iteration, these spawners were conceptualized as ray guns. This introduces a specific tactical layer to the locomotion: you can have two &amp;ldquo;pulls&amp;rdquo; acting on you simultaneously, allowing for complex curved trajectories.&lt;/p&gt;</description>
+      <guid>https://example.org/posts/implementation/gravitational-interaction/</guid>
+      <description>&lt;p&gt;Once the core physics were verified, the project moved from a single-script test into a functional VR traversal system. This required building a robust &amp;ldquo;hand&amp;rdquo; system and a way to manage the state of the world&amp;rsquo;s gravity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;spawning-and-controlling-the-spheres&#34;&gt;Spawning and Controlling the Spheres&lt;/h2&gt;&#xA;&lt;p&gt;I implemented two spawners Blue (Right) and Red (Left), each managing one gravity sphere. In my final iteration, these spawners were conceptualized as ray guns. This introduces a specific tactical layer to the locomotion: you can have two &amp;ldquo;pulls&amp;rdquo; acting on you simultaneously, allowing for complex curved trajectories.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Idea</title>
       <link>https://example.org/posts/the-idea/</link>
       <pubDate>Wed, 25 Feb 2026 18:09:45 +0100</pubDate>
       <guid>https://example.org/posts/the-idea/</guid>
-      <description>&lt;h1 id=&#34;introduction-the-hci-challenge&#34;&gt;Introduction: The HCI Challenge&lt;/h1&gt;&#xA;&lt;p&gt;For my &amp;ldquo;Interaction in Virtual and Artifical Reality&amp;rdquo; class, we were assigned to develop a novel and creative way to interact and move in VR/AR. We were completely free in choosing what to do and how to do it. We could freely choose how to go about challenges like presence, motion sickness, interactivity, story line, and so on.&lt;/p&gt;&#xA;&lt;p&gt;Not being the most creative person, I had some trouble coming up with an idea at first. After a while, I had the idea of implementing a kind of Human: Fall Flat style locomotion and interaction system, as I remember it as a very fun but challenging game. It had the added benefit that climbing is a great way to avoid cyber sickness. But this idea was not quite original, as it wasn&amp;rsquo;t my own. So I talked to everyone I thought could have good ideas.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;introduction-the-hci-challenge&#34;&gt;Introduction: The HCI Challenge&lt;/h2&gt;&#xA;&lt;p&gt;For my &amp;ldquo;Interaction in Virtual and Artifical Reality&amp;rdquo; class, we were assigned to develop a novel and creative way to interact and move in VR/AR. We were completely free in choosing what to do and how to do it. We could freely choose how to go about challenges like presence, motion sickness, interactivity, story line, and so on.&lt;/p&gt;&#xA;&lt;p&gt;Not being the most creative person, I had some trouble coming up with an idea at first. After a while, I had the idea of implementing a kind of Human: Fall Flat style locomotion and interaction system, as I remember it as a very fun but challenging game. It had the added benefit that climbing is a great way to avoid cyber sickness. But this idea was not quite original, as it wasn&amp;rsquo;t my own. So I talked to everyone I thought could have good ideas.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The T-Shape Challenge</title>
-      <link>https://example.org/posts/t-shape/</link>
+      <link>https://example.org/posts/implementation/t-shape/</link>
       <pubDate>Wed, 25 Feb 2026 18:09:45 +0100</pubDate>
-      <guid>https://example.org/posts/t-shape/</guid>
-      <description>&lt;p&gt;With the locomotion system feeling snappy and &amp;ldquo;skill-based,&amp;rdquo; it was time to apply it to a specific interaction task. The goal: Manipulate a T-shaped object to match a target ghost-shape in 3D space. This requires both precise translation (positioning) and rotation.&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-failure-of-gravity&#34;&gt;The Failure of Gravity&lt;/h1&gt;&#xA;&lt;p&gt;Initially, following a suggestion from my project pitch, I tried to use the gravity spheres to move the T-shape. The idea was elegant and resourceful: instead of pulling the player, the spheres would pull the object.&lt;/p&gt;</description>
+      <guid>https://example.org/posts/implementation/t-shape/</guid>
+      <description>&lt;p&gt;With the locomotion system feeling snappy and &amp;ldquo;skill-based,&amp;rdquo; it was time to apply it to a specific interaction task. The goal: Manipulate a T-shaped object to match a target ghost-shape in 3D space. This requires both precise translation (positioning) and rotation.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-failure-of-gravity&#34;&gt;The Failure of Gravity&lt;/h2&gt;&#xA;&lt;p&gt;Initially, following a suggestion from my project pitch, I tried to use the gravity spheres to move the T-shape. The idea was elegant and resourceful: instead of pulling the player, the spheres would pull the object.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
