@@ -2,6 +2,7 @@
 date = '2026-02-25T18:09:45+01:00'
 draft = false
 title = 'The Idea'
+featured = true
 +++
 ## Introduction: The HCI Challenge
 For my "Interaction in Virtual and Artifical Reality" class, we were assigned to develop a novel and creative way to interact and move in VR/AR. We were completely free in choosing what to do and how to do it. We could freely choose how to go about challenges like presence, motion sickness, interactivity, story line, and so on.
