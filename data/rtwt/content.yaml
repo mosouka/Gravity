@@ -3,9 +3,5 @@ home:
   text: 'In this blog, I share my progress and thought process on an HCI project I was assigned for my university course'
 side:
   home:
-  - content: 'If you would'
-  - title: 'Reverse Classroom'
-    content: 'Maybe put it here?'
-  single:
-  - title: 'Static Content'
-    content: 'Single pages (a.k.a. blog posts) can also have static content like so!'
+  - title: 'About Me'
+    content: "Hey there. My name is Cosima and I'm a Computer Science Masters student at TU Darmstadt. I have a passion for HCI, and I am excited to share my journey with you!"
