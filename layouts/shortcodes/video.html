@@ -1,6 +1,60 @@
-<video
-  src="{{ .Get "src" }}"
-  {{ with .Get "controls" }}controls{{ end }}
->
-Sorry, your browser doesn’t support embedded videos.
-</video>
+{{ $filename := .Get "src" }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $height := .Get "height" }}
+{{ $autoplay := .Get "autoplay" }}
+{{ $loop := .Get "loop" }}
+{{ $caption := .Get "caption" }}
+{{ $controls := .Get "controls" | default "true" }}
+{{ $muted := .Get "muted" }}
+
+{{ if and $autoplay (ne $muted "false") }}
+  {{ $muted = "true" }}
+{{ end }}
+
+{{ $videoID := delimit (slice "video" (.Ordinal) (now.Unix)) "-" | urlize }}
+
+{{ if not $filename }}
+  {{ errorf "FEHLER: Der Shortcode <video> benötigt den Parameter 'src' (Dateiname ohne Endung)." .Position }}
+{{ else }}
+  <div class="flex flex-col">
+    <div class="video-container" style="max-width: {{ $width }}; margin: 0 auto;">
+
+      <video
+        id="{{ $videoID }}"
+        class="autoplay-video-element"
+        {{ if $autoplay }}autoplay style="display: block;"{{ else }}controls{{ end }}
+        {{ if $loop }}loop{{ end }}
+        {{ if eq $muted "true" }}muted{{ end }}
+        {{ with $width }}width="{{ . }}"{{ end }}
+        {{ with $height }}height="{{ . }}"{{ end }}
+        preload="metadata"
+        playsinline
+      >
+        <source src="/assets/media/{{ $filename }}.mp4" type="video/mp4">
+        <source src="/assets/media/{{ $filename }}.webm" type="video/webm">
+        Ihr Browser unterstützt leider das Video-Tag nicht.
+      </video>
+    </div>
+
+    {{ if $autoplay }}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('{{ $videoID }}');
+        var promise = video.play();
+        if (promise !== undefined) {
+          promise.catch(error => {
+            video.setAttribute('controls', 'true');
+            video.style.display = 'block';
+          });
+        }
+      });
+    </script>
+    {{ end }}
+
+    {{ if $caption }}
+      <span class="-mt-6 mb-4 text-center text-sm text-slate-700 dark:text-slate-200">
+        {{ $caption | markdownify }}
+      </span>
+    {{ end }}
+  </div>
+{{ end }}
