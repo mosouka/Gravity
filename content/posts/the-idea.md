@@ -48,7 +48,7 @@ public class GravitationalField : MonoBehaviour
 ```
 For the gravitational sphere to control the motion, I first had to disable the Rigidbody’s built‑in gravity; otherwise, the default global gravity would dominate and interfere with the effect of the sphere. The gravitational force is applied in FixedUpdate, which runs at a fixed time step and is therefore better suited for physics calculations than the regular Update loop. Each frame, the script computes the direction and distance to the sphere’s center, calculates the force magnitude as proportional to $1/r^22$, and then applies it to the character’s Rigidbody using AddForce. Inside a small inner radius, the character is simply stopped to avoid unstable behavior very close to the center.
 
-{{< video src="GravityField_prototypeDemo" autoplay="false" caption="Prototype demo" >}}
+{{< youtube dDaV9fnUTUE  >}}
 
 The video shows my first prototype of the gravitational interaction using a single sphere. I experimented with moving this sphere around the character to see how it influenced their path and to get a feeling for whether this interaction could actually serve as a locomotion method in VR. Trying it in VR myself, it felt like a playful and somewhat intuitive way to move around. At least if you are not too prone to motion sickness. However, it could also easily cause uncontrollable oscillation and overshooting, which presented one of the challanges I would have to face. 
 
@@ -63,4 +63,4 @@ With the rigidbody gravity turned off, there was no way to stop unwanted movemen
 
 To make this a viable locomotion system, I needed to find a way to give the player total control over the gravitational forces.
 
-Next post: [Gravitational Interaction](/Implementation/gravitational-interaction)
+Next post: [Gravitational Interaction]({{<ref gravitational-interaction >}})
