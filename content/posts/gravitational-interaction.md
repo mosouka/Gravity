@@ -24,7 +24,11 @@ A key technical challenge was managing the player’s relationship with "normal"
 It took me several iterations and ideas to get to the final version of the gravitational interaction. These steps included:
 
 ### 1. Spawning
-To make the spheres more controllable, I implemented a preview system that shows where the sphere will spawn based on the raycast from the controller. A sphere is placed by pressing the trigger, and despawned by either pressing the trigger again or by the player physically colliding with it (OnTriggerEnter), which feels like "collecting" the sphere.
+To make the spheres more controllable, I implemented a preview system that shows where the sphere will spawn based on the raycast from the controller. A sphere is placed by pressing the trigger, and despawned by either pressing the trigger again or, implemented in later iterations, by the player physically colliding with it (OnTriggerEnter), which feels like "collecting" the sphere.
+
+{{< youtube AWyNxIoU2T8 >}}
+
+The video shows the very first implementation of the spawning system.
 
 ### 2. Distance Manipulation
 Next, I added depth control. By moving the joystick in the Y-direction, the player can slide the preview sphere further away or pull it closer. This was essential for reaching specific locations and creating more complex trajectories.
@@ -48,7 +52,7 @@ $$F = G \frac{m_1 m_2}{(r^2 + \epsilon^2)^{3/2}}$$
 Where $\epsilon$ is the softening constant. This adjustment significantly reduced the "catapulting" effect, making the movement feel more controlled and less prone to wild oscillations.
 
 ### Force Amplification
-During my final presentation and first game demo, my professor and classmates gave me the feedback that the start of the acceleration felt very (too) slow. So, I added an amplification factor, so that accerlation starts faster even with small masses and larger distances. While my desire to make a physically accurate simulation was strong, I also wanted the system to be fun and feel good to use. My professor rightfully told me "Realistic went out the window once you were able to create gravitational force fields". True that.
+During my final presentation and first game demo, my professor and classmates gave me the feedback that the start of the acceleration felt very (too) slow. So, I added an amplification factor, so that accerlation starts faster even with small masses and larger distances. While my desire to make a physically accurate simulation was strong, I also wanted the system to be fun and feel good to use.
 
 
 I can honestly say that I am quite happy with the result of my gravitational spheres and the spawning system. While it can be hard to control, it still feels very fun to me and I am happy I was able to make a (kind of) physically accurate gravity simulation, albeit with the help of my good friend Perplexity. It was also fun to experiment with the different parameters and see how they influenced the feel of the movement. While I didn't implement Human: Fall Flat, this locomotion system brings a similar sense of chaos.

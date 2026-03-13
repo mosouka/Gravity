@@ -115,6 +115,10 @@ The Failure of Gravity Gravity Hands My first idea for the interaction was to im
 <li><strong>The Rotation</strong>: The T-shape would often rotate uncontrollably when influenced by the spheres, making it difficult to achieve the precise orientation needed to match the target shape.</li>
 </ul>
 <p>To fix these issues, I added invisible walls to prevent the T-shape from flying too far away, and I implemented a &ldquo;kill switch&rdquo; that would stop all movement and make the T-shape kinematic once its position was close to the target, i.e., when the task sphere would appear.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Vmk1FSY5NyE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
 <p>While this worked and I was initially happy with the results, it felt like a &ldquo;hacky&rdquo; solution that wasn&rsquo;t satisfying to use. The movement felt uncontrollable, and the task sphere sometimes pulled the player too close to the T-shape, making it difficult to rotate. Furthermore, it was frustrating to be &ldquo;paralyzed&rdquo; while the interaction task was being completed, as the gravity spheres no longer affected the player and the only means of movement was taken away.</p>
 <h2 id="the-pivot-ray-guns">The Pivot: Ray Guns</h2>
 <p>I decided to move away from gravitational pull for interaction and instead, inspired by the game Portal, implemented a specialized Ray Interaction System. This system was also the reason I decided to opt for the &ldquo;gun&rdquo; aesthetic for the spawners, as it fit well with the idea of shooting rays to manipulate objects.</p>

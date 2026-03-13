@@ -117,7 +117,12 @@ Spawning and Controlling the Spheres I implemented two spawners Blue (Right) and
 <h2 id="iterative-design-previewing-and-manipulation">Iterative Design: Previewing and Manipulation</h2>
 <p>It took me several iterations and ideas to get to the final version of the gravitational interaction. These steps included:</p>
 <h3 id="1-spawning">1. Spawning</h3>
-<p>To make the spheres more controllable, I implemented a preview system that shows where the sphere will spawn based on the raycast from the controller. A sphere is placed by pressing the trigger, and despawned by either pressing the trigger again or by the player physically colliding with it (OnTriggerEnter), which feels like &ldquo;collecting&rdquo; the sphere.</p>
+<p>To make the spheres more controllable, I implemented a preview system that shows where the sphere will spawn based on the raycast from the controller. A sphere is placed by pressing the trigger, and despawned by either pressing the trigger again or, implemented in later iterations, by the player physically colliding with it (OnTriggerEnter), which feels like &ldquo;collecting&rdquo; the sphere.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/AWyNxIoU2T8?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<p>The video shows the very first implementation of the spawning system.</p>
 <h3 id="2-distance-manipulation">2. Distance Manipulation</h3>
 <p>Next, I added depth control. By moving the joystick in the Y-direction, the player can slide the preview sphere further away or pull it closer. This was essential for reaching specific locations and creating more complex trajectories.</p>
 <h3 id="3-size-mass-scaling">3. Size (Mass) Scaling</h3>
@@ -133,7 +138,7 @@ Spawning and Controlling the Spheres I implemented two spawners Blue (Right) and
 </p>
 $$F = G \frac{m_1 m_2}{(r^2 + \epsilon^2)^{3/2}}$$<p>Where $\epsilon$ is the softening constant. This adjustment significantly reduced the &ldquo;catapulting&rdquo; effect, making the movement feel more controlled and less prone to wild oscillations.</p>
 <h3 id="force-amplification">Force Amplification</h3>
-<p>During my final presentation and first game demo, my professor and classmates gave me the feedback that the start of the acceleration felt very (too) slow. So, I added an amplification factor, so that accerlation starts faster even with small masses and larger distances. While my desire to make a physically accurate simulation was strong, I also wanted the system to be fun and feel good to use. My professor rightfully told me &ldquo;Realistic went out the window once you were able to create gravitational force fields&rdquo;. True that.</p>
+<p>During my final presentation and first game demo, my professor and classmates gave me the feedback that the start of the acceleration felt very (too) slow. So, I added an amplification factor, so that accerlation starts faster even with small masses and larger distances. While my desire to make a physically accurate simulation was strong, I also wanted the system to be fun and feel good to use.</p>
 <p>I can honestly say that I am quite happy with the result of my gravitational spheres and the spawning system. While it can be hard to control, it still feels very fun to me and I am happy I was able to make a (kind of) physically accurate gravity simulation, albeit with the help of my good friend Perplexity. It was also fun to experiment with the different parameters and see how they influenced the feel of the movement. While I didn&rsquo;t implement Human: Fall Flat, this locomotion system brings a similar sense of chaos.</p>
 <p>Next post: <a href="https://example.org/posts/t-shape/">The T-Shape Challenge</a></p>
 </section></main>
@@ -146,7 +151,7 @@ $$F = G \frac{m_1 m_2}{(r^2 + \epsilon^2)^{3/2}}$$<p>Where $\epsilon$ is the sof
 </div>
 </footer>
       </div><aside id="side-pane" class="side-sticky"><div class="side-details">
-    <span>857 words</span>
+    <span>851 words</span>
     <span>4 - 6 minutes read</span></div><h3>Table Of Contents</h3><nav id="TableOfContents">
   <ul>
     <li><a href="#spawning-and-controlling-the-spheres">Spawning and Controlling the Spheres</a>

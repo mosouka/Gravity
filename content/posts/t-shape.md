@@ -24,6 +24,8 @@ However, this approach also had its issues:
 
 To fix these issues, I added invisible walls to prevent the T-shape from flying too far away, and I implemented a "kill switch" that would stop all movement and make the T-shape kinematic once its position was close to the target, i.e., when the task sphere would appear.
 
+{{< youtube Vmk1FSY5NyE >}}
+
 While this worked and I was initially happy with the results, it felt like a "hacky" solution that wasn't satisfying to use. The movement felt uncontrollable, and the task sphere sometimes pulled the player too close to the T-shape, making it difficult to rotate. Furthermore, it was frustrating to be "paralyzed" while the interaction task was being completed, as the gravity spheres no longer affected the player and the only means of movement was taken away.
 
 ## The Pivot: Ray Guns
