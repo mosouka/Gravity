@@ -10,7 +10,7 @@ As I was unfortunately sick the day we were supposed to present our reverse clas
 While Valem used Unity version 2019.3.8f1 and an older version XR Interaction Toolkit in their tutorial, I used Unity 6 and XR Interaction Toolkit version 3.2.2. This meant that I had to make some adjustments to the code and implementation, but the overall logic and structure of the climbing system remained the same. If you're too lazy to implement the climbing system from scratch, the newest XR Interaction Toolkit also comes with a built-in climbing system.
 
 ## Requirements
-To start, you need a working VR with an XR Direct Interactor. Optionally, you can also add Continuous Movement, but I will also show how Valem implemented that from scratch.
+To start, you need a working VR with an XR Direct Interactor. Optionally, you can also add Continuous Movement.
 
 While there is a Continuous Movement script included in the XR Toolkit, it apparently wasn't in the version Valem used, so here is the implementation adapted to the new Input System and XR Interaction Toolkit:
 ```csharp
