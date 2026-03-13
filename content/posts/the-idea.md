@@ -12,8 +12,8 @@ Not being the most creative person, I had some trouble coming up with an idea at
 ## The Spark: A Lunch with my Dad
 One day, I was having lunch with my dad, and I told him about the project. He is a physicist, and I thought he might have some interesting ideas. He suggested that I could use the concept of gravity to create a new way of moving in VR. He explained that an exponential increase in velocity could be a fun way to move in VR. Thruth be told, I didn't completely understand it at first, but it sounded like it could be fun. However, I knew there would be a huge trade-off with motion sickness, so I wasn't completely sold on it. But because the idea was actually novel, unlike my own, I decided to pitch it to my professor. He seemed to like it, and I decided to build a prototype to see if it would work.
 
-## The Blueprint: Gravitational Locomotion
-The player is able to spawn one gravitational sphere per hand: blue = right, and red = left. Based on Newton's Law of Gravitational Force ($F = G \frac{m_1 m_2}{r^2}$), the player is pulled towards the active sphere with a force proportional to $1/r^2$, where r is the distance between the player and the sphere. The player can move by placing the sphere in different locations, using the law of gravity to traverse the environment, like a space explorer using gravity assists to slingshot around planets.
+## The Blueprint: Localized Gravity Spheres
+The player is able to spawn one gravitational sphere per hand: blue = right, and red = left. Based on Newton's Law of Gravitational Force ($$F = G \frac{m_1 m_2}{r^2}$$), the player is pulled towards the active sphere with a force proportional to $$1/r^2$$, where r is the distance between the player and the sphere. The player can move by placing the sphere in different locations, using the law of gravity to traverse the environment, like a space explorer using gravity assists to slingshot around planets.
 
 ## The first Prototype: Core Gravitational Interaction
 ```
