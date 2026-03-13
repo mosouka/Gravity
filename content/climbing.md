@@ -12,6 +12,8 @@ While Valem used Unity version 2019.3.8f1 and an older version XR Interaction To
 ## Requirements
 To start, you need a working VR with an XR Direct Interactor. Optionally, you can also add Continuous Movement.
 
+Then, of course, you need a climbing wall, which you can download [here](https://drive.google.com/file/d/1gwLXOBAx5IqPFIDcJJIyJSVAgR9GifKX/view).
+
 While there is a Continuous Movement script included in the XR Toolkit, it apparently wasn't in the version Valem used, so here is the implementation adapted to the new Input System and XR Interaction Toolkit:
 ```csharp
 using UnityEngine;
@@ -47,8 +49,6 @@ public class ContinuousMovement : MonoBehaviour
 }
 ```
 This script allows the player to move around using the joystick. It gets the input from the specified XRNode (left or right hand) and moves the character controller in the direction of the input axis, multiplied by a speed factor and the fixed delta time.
-
-Then, of course, you need a climbing wall, which you can download [here](https://drive.google.com/file/d/1gwLXOBAx5IqPFIDcJJIyJSVAgR9GifKX/view).
 
 ## Climbable Interactable
 The next step is to make the climbing knobs interactable. This requires two steps:
@@ -98,7 +98,7 @@ So, to explain what the script does, it overrides the OnSelectEntered and OnSele
 
 ## Climber
 Now that we have interactable climbing knobs, we need to implement the climbing logic. 
-First of all, we need to attach a CharacterController component to the player to move. Also, we need a Gravity component so we fall back to the ground when releasing, and not just awkwardly float in the air. Then, optionally, we can also implement a Continuous Movement script, which allows the player to move around using the joystick. This is not necessary for climbing, but then you can also move outside of climbing.
+First of all, we need to attach a CharacterController component to the player to move. Also, we need a Gravity component so we fall back to the ground when releasing, and not just awkwardly stay in the air. Then, optionally, we can also add our Continuous Movement script to move on the ground.
 Next, we need to implement the Climber script, which will handle the climbing logic. The script will check if there is a climbing hand registered, and if so, it will move the player based on the movement of the climbing hand.
 
 ```csharp
@@ -157,4 +157,4 @@ Now, to explain the script, it checks if there is a climbing hand registered. If
 
 And there we have it! You are now able to climb in VR.
 
-{{< youtube Zsk5HSdsmw >}}
+{{< youtube _Zsk5HSdsmw >}}
