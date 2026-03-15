@@ -4,13 +4,11 @@ draft = false
 title = 'Reverse Classroom - Climbing'
 +++
 
-{{< youtube mHHYI7hzZ6M >}}
+{{< youtube HL0mo_83mMo >}}
 
 As I was unfortunately sick on the day we were supposed to present our reverse classroom assignment, I will present my implementation here instead.
 
-{{< youtube HL0mo_83mMo >}}
-
-While Valem used Unity version 2019.3.8f1 and an older version of the XR Interaction Toolkit in their tutorial, I used Unity 6 and XR Interaction Toolkit version 3.2.2. This meant that I had to make some adjustments to the code and implementation, but the overall logic and structure of the climbing system remained the same. If you're too lazy to implement the climbing system from scratch, the newest XR Interaction Toolkit also comes with a built-in climbing system.
+While [Valem](https://www.youtube.com/watch?v=mHHYI7hzZ6M&t=29s) used Unity version 2019.3.8f1 and an older version of the XR Interaction Toolkit in their tutorial, I used Unity 6 and XR Interaction Toolkit version 3.2.2. This meant that I had to make some adjustments to the code and implementation, but the overall logic and structure of the climbing system remained the same. If you're too lazy to implement the climbing system from scratch, the newest XR Interaction Toolkit also comes with a built-in climbing system.
 
 ## Requirements
 To start, you need a working VR setup with a Character Controller and an XR Direct Interactor. Optionally, you can also add Continuous Movement.
