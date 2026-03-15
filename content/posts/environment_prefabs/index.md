@@ -18,6 +18,7 @@ When I built the project for the Meta Quest, I had to optimize the spheres to ru
 To fix this, I had to switch to something more performance-friendly. Luckily, I found [this](https://assetstore.unity.com/packages/vfx/black-hole-effect-356686) black hole effect on the Unity Asset Store, which was perfect for my needs. I simply changed the colors to match my theme. The result was a significant improvement in performance while still maintaining a visually interesting design for the spheres.
 
 ![Left Sphere](LeftSphere.jog)
+
 ![Right Sphere](RightSphere.jpg)
 
 ### The Ray Guns
