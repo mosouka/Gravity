@@ -1,9 +1,232 @@
-<script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]'], ['$$', '$$']]
-      }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Final Experience - Demo and User Study | Gravity</title>
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" /><meta property="og:url" content="https://mosouka.github.io/Gravity/posts/user-study/">
+  <meta property="og:site_name" content="Gravity">
+  <meta property="og:title" content="The Final Experience - Demo and User Study">
+  <meta property="og:description" content="The Demo The User Study With the implementation complete, I was ready to test the experience with real users. I conducted a small user study with 3 participants to gather feedback on the locomotion and interaction systems. The study consisted of two parts: users testing out the parkour, followed by a (not so) short questionnaire I had generated to get some more structured feedback.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-15T12:57:45+01:00">
+    <meta property="article:modified_time" content="2026-03-15T12:57:45+01:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Final Experience - Demo and User Study">
+  <meta name="twitter:description" content="The Demo The User Study With the implementation complete, I was ready to test the experience with real users. I conducted a small user study with 3 participants to gather feedback on the locomotion and interaction systems. The study consisted of two parts: users testing out the parkour, followed by a (not so) short questionnaire I had generated to get some more structured feedback.">
+
+      <link rel="stylesheet" href="/Gravity/css/root.min.0e732b812b9751962e01a7c4798a1211cd5f8ac8abec7f99793fe306989e459f.css" integrity="sha256-DnMrgSuXUZYuAafEeYoSEc1fisir7H&#43;ZeT/jBpieRZ8=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/Gravity/css/bundle.min.35b15f72eff61cbb106d05bab1ea1aebb778d0ba2861c763af0af0d80f43db4f.css" integrity="sha256-NbFfcu/2HLsQbQW6seoa67d40LooYcdjrwrw2A9D208=" crossorigin="anonymous">
+
+      <script src="/Gravity/js/bundle.cc8ae9952dbfb731affafabdf26e5c60a6910047ff59ccdeaf1daebaa26c8830.js" integrity="sha256-zIrplS2/tzGv&#43;vq98m5cYKaRAEf/Wczerx2uuqJsiDA=" crossorigin="anonymous"></script><script defer src="/Gravity/js/search/flexsearch.compact.3928d3d2172bc0b5f75d9458fb9255f0befce1c7239ba6e5d2c58ed4b82c2073.js" integrity="sha256-OSjT0hcrwLX3XZRY&#43;5JV8L784ccjm6bl0sWO1LgsIHM="></script>
+<script defer src="/Gravity/js/search/search.b50712055be50de28aabbe06f682d0442a48692f157d4de4533e483aaacd6061.js" integrity="sha256-tQcSBVvlDeKKq74G9oLQRCpIaS8VfU3kUz5IOqrNYGE="></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+</head>
+<body class="notransition">
+  <div id="container">
+    <header id="main-header"><div role="navigation" aria-label="Main">
+  <div class="nav-left">
+    <a href="https://mosouka.github.io/Gravity/" style="color: inherit;">Gravity</a>
+  </div>
+  <div class="nav-right">
+    <div style="position:absolute;width:0px;height:0px;">
+      <div id="nav-dropdown-menu" class="hidden" href="#">
+    <div class="nav-item">
+      <a aria-current="true" class="ancestor" href="/Gravity/posts/"
+      >Project</a>
+    </div>
+    <div class="nav-item">
+      <a href="/Gravity/climbing/"
+      >Reverse Classroom</a>
+    </div>
+</div>
+    </div>
+    <a id="nav-dropdown-button" href="#"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+    <div id="nav-menu">
+    <div class="nav-item">
+      <a aria-current="true" class="ancestor" href="/Gravity/posts/"
+      >Project</a>
+    </div>
+    <div class="nav-item">
+      <a href="/Gravity/climbing/"
+      >Reverse Classroom</a>
+    </div>
+</div>
+    <a id="theme-switcher" href="#">
+<svg class="light-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+<svg class="dark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+  </div>
+</div>
+</header>
+    <div class="flex grow">
+      <div id="main-pane">
+        <main id="main-content"><div class="single-header">
+<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://mosouka.github.io/Gravity/">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content='1' />
+    </li>
+    <span>&nbsp»&nbsp</span>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://mosouka.github.io/Gravity/posts/">
+        <span itemprop="name">Posts</span>
+      </a>
+      <meta itemprop="position" content='2' />
+    </li>
+    <span>&nbsp»&nbsp</span>
+</ol>
+<h1>The Final Experience - Demo and User Study</h1><time class="dim" datetime="2026-03-15T12:57:45&#43;01:00">March 15, 2026</time></div>
+  <section class="page-section"><h2 id="the-demo">The Demo</h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/K8EPBnRTFdg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h2 id="the-user-study">The User Study</h2>
+<p>With the implementation complete, I was ready to test the experience with real users. I conducted a small user study with 3 participants to gather feedback on the locomotion and interaction systems. The study consisted of two parts: users testing out the parkour, followed by a (not so) short questionnaire I had generated to get some more structured feedback.</p>
+<p>The questionnaire included the following questions:</p>
+<ol>
+<li>I quickly understood how to move using the gravity fields. (1-5)</li>
+<li>The locomotion system was easy to learn. (1-5)</li>
+<li>The object interaction system was easy to learn. (1-5)</li>
+<li>I felt in control while moving through the environment. (1-5)</li>
+<li>I was able to control my movement trajectory accurately. (1-5)</li>
+<li>I could reliably reach the locations I intended to reach. (1-5)</li>
+<li>The movement behaved as I expected. (1-5)</li>
+<li>It was easy to correct my movement if I made a mistake. (1-5)</li>
+<li>I felt in control while manipulating objects. (1-5)</li>
+<li>It was easy to position objects precisely. (1-5)</li>
+<li>Rotating objects using two hands felt natural. (1-5)</li>
+<li>The locomotion system felt comfortable to use. (1-5)</li>
+<li>I did not experience motion sickness while using the system. (1-5)</li>
+<li>The interaction method was enjoyable to use. (1-5)</li>
+<li>The system felt immersive. (1-5)</li>
+<li>I would like to use this interaction system in a VR game. (1-5)</li>
+<li>What did you like most about the interaction system? (Open-ended)</li>
+<li>What part of the system was most difficult to use? (Open-ended)</li>
+<li>Do you have suggestions for improving the interaction? (Open-ended)</li>
+</ol>
+<p>In case you&rsquo;re thinking &ldquo;Cosima, that is way too long.&rdquo;: Yes, you&rsquo;re probably right, but because I wanted to get as much feedback as possible, I thought it would be good to have a thorough questionnaire. Plus, because 2/3 participants did it remotely, I thought this was the best way to get as much feedback as possible.</p>
+<p>In any case, the feedback was a lot better than I thought, to be honest. I knew that my locomotion system had a strong learning curve and high potential for motion sickness, so I was frankly a bit anxious to see how people would react to it. But the participants were surprisingly positive about the experience.</p>
+<p>As the questionnaire is quite long, I won&rsquo;t go through all the results here, but I let Gemini help me summarize the key findings and insights from the user study:</p>
+<h3 id="locomotion">Locomotion</h3>
+<p>Overall, the &ldquo;fun-factor&rdquo; of the gravity sphere is rated very high. Question items 14-16 were rated by all three participants either a 4 or 5. Furthermore, they stated that &ldquo;The adjustable force makes it really fun&rdquo;, &ldquo;Controllability and challange are nicely balanced&rdquo;, and &ldquo;Flying around and slingshots !&rdquo; were what they liked most about the interaction. Furthermore, question item 6 and 7 also had high ratings, with all participants giving a rating of 3 or 5, indicating that they could reliably reach their intended locations and that the movement behaved as they expected.</p>
+<p>However, the learning curve, controllability, and trajectory control (1, 2, 4, 5, 8) were rated lower, with some participants giving ratings as low as 2 for these items. The open-ended feedback highlighted that &ldquo;I would overshoot often but got the hang of it later&rdquo;, &ldquo;I felt totally out of control when using two gravity fields, so I didn’t.&rdquo;, and &ldquo;Precise controlling of acceleration and placing spheres while moving .&rdquo; were some of the most difficult aspects of the system as a whole. At the same time, question item 6 had a high rating</p>
+<p>Surprisingly, question item 13 was rated evenly between 3 and 5 (I just hope they didn&rsquo;t miss the &ldquo;not&rdquo;). This is surprsingly low, but might also be because of the participants being less prone to cybersickness.</p>
+<h3 id="interaction">Interaction</h3>
+<p>All participants thought that the interaction system was easy to learn (3), and they felt in control while manipulating objects (9). Morever, it was overwhelmingly easy to position objects precisely (10). However, question item 11 had a more ambiguous rating, with 2/3 rating a 3 and 1/3 rating a 4, indicating that it felt somewhat natural to rotate objects using two hands, but there is room for improvement.</p>
+<h3 id="times">Times</h3>
+<p>As part of the parkour mechanics, the completion time for the sections and the interaction tasks were also recorded. I forgot to write down the times for one of the participants, but I do have the times for the other two.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Parkour</th>
+          <th>Participant 2</th>
+          <th>Participant 3</th>
+          <th>Me</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Section 1</td>
+          <td>105.3s, 14/16 coins</td>
+          <td>128.5s, 15/16 coins</td>
+          <td>144.9s, 4/16 coins</td>
+      </tr>
+      <tr>
+          <td>Task 1</td>
+          <td>2.5s, 0.01 error</td>
+          <td>4.7s, 0.00 error</td>
+          <td>10.8s, 0.00 error</td>
+      </tr>
+      <tr>
+          <td>Section 2</td>
+          <td>96.0s, 30/30 coins</td>
+          <td>116.3s, 30/30 coins</td>
+          <td>101.2s, 16/30 coins</td>
+      </tr>
+      <tr>
+          <td>Task 2</td>
+          <td>2.5s, 0.01 error</td>
+          <td>3.5s, 0.00 error</td>
+          <td>7.9s, 0.00 error</td>
+      </tr>
+      <tr>
+          <td>Section 3</td>
+          <td>77.2, 21/23  coins</td>
+          <td>⁠131.1s, 23/23 coins</td>
+          <td>83.6s, 18/23 coins</td>
+      </tr>
+      <tr>
+          <td>Task 3</td>
+          <td>2.1s, 0.01 error</td>
+          <td>8.0s, 0.00 error</td>
+          <td>7.4s, 0.00 error</td>
+      </tr>
+      <tr>
+          <td><strong>Total Sections</strong></td>
+          <td><strong>278.6, 65/69 coins</strong></td>
+          <td><strong>375.9s, 68/69 coins</strong></td>
+          <td>329.7s, 38/69 coins</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="suggestions-and-future-improvements">Suggestions and Future Improvements</h3>
+<p>While one person liked the system the way it is, another noted &ldquo;Prevent the object interaction from being exploited as a simple grab. And maybe decrease defaul force field size.&rdquo;. When I personally tested the system, I frankly didn&rsquo;t notice the interaction system could be exploited like that. I was fully aware of the lcomotion system&rsquo;s potential exploitations, but this came as a surprise. The participant later texted me that I could implement a distance limit for the ray interaction, so that you can only pick up the object if you are far enough away from it. This would prevent the &ldquo;grabbing&rdquo; exploit, where you could do a simple grab.</p>
+<p>The third person suggested &ldquo;Maybe instant replacing of old sphere instead using two clicks for picking up and placing&rdquo;. While I really like this idea and agree with it, I also think that it would make the system a lot more difficult to use, especially for beginners, as I currently see no way of implementing this while still having the &ldquo;kill-switch&rdquo; functionality.</p>
+<p>However, I have personally also thought that a different setting, like a true zero-gravity environment, could be a better fit for the gravity spheres, as it would allow for more freedom of movement. Working out how to avoid overshooting and uncontrollable trajectories in such a setting would be a fun challenge, and it would also fit the sci-fi theme of the ray guns and black hole spheres better.</p>
+<p>Another idea suggested by one of the participants is to make this more of a puzzle game, where you can first explore the parkour and then think of how you could place as little spheres as possible to get to the end of the course. This would be a fun way to make the most out of the unique mechanics of the gravity spheres, and it would also give players a clear goal to work towards while learning how to use the system.</p>
+<p>In a similar vein, I have also thought about implementing portal inspired puzzle rooms, where you have to strategically place the spheres to get through the room and also have small puzzles you have to solve with the interaction system. This would be a fun way to make the most out of the unique mechanics of the gravity spheres, and it would also give players a clear goal to work towards while learning how to use the system. Furthermore, just like in portal, you can guide the player through the learning curve by making the challanges progressively more difficult, starting with simple movement and then gradually introducing more complex mechanics like using multiple spheres and the interaction system.</p>
+<h2 id="final-reflections">Final Reflections</h2>
+<p>Overall, the class IVAR was by far one of the best I have had during the course of my studies thus far. Not only did I have a lot of fun working on this project, I also thoroughly enjoyed being part of the class. I have not had the pleasure to experience a class with this much discussion and active participants from the students, something that I wager to say is a bit of a rare sight in CS.</p>
+<p>While we were alone in our projects, we were never alone in our struggles. The class was a great place to share ideas, get feedback, and learn from each other. I think this collaborative environment was one of the key factors that made this class so enjoyable and rewarding. Furthermore, I don&rsquo;t think my project would be the way it is without the feedback and suggestions I got from my classmates and professor, so I am very grateful for that.</p>
+<p>While I had a strong interest in HCI prior to taking this class, my interest has only been further fueled by this project. It makes me want to dive deeper into the field and explore, as well as research, more about this field of studies. Having a bachelor&rsquo;s degree in Cognitive Science, I believe that this area is one that can neatly combine my interests in both technology and human behavior, and I am excited to see where this interest will take me in the future.</p>
+<p>In any case, I am very happy with the final result of my project, and I am grateful for the opportunity to work on such a fun and creative project. While I didn&rsquo;t necessarily improve my non-existant programming skills, I believe I have learned a lot in both the class and my project. This wasn&rsquo;t my first rodea with VR and Unity, but I do believe that I have gained a deeper understanding of both technologies and hope to use this knowledge in future projects.</p>
+<p>Thank you to everyone who participated in the user study, and thank you to my professor and classmates for all the feedback and support throughout the project. It has been a great experience.</p>
+</section></main>
+        <footer id="main-footer"><div class="footer">
+  <a href="#">Scroll to Top</a>
+  <div class="footer-copyright">
+    <div class="dim">© 2026 </div>
+    <div>Made with ❤️ and powered by <a href="https://github.com/math-queiroz/rusty-typewriter" target="_blank">Rusty Typewriter</a> theme for <a href="https://gohugo.io/" target="_blank">Hugo</a></div>
+  </div>
+</div>
+</footer>
+      </div><aside id="side-pane" class="side-sticky"><div class="side-details">
+    <span>1618 words</span>
+    <span>8 - 11 minutes read</span></div><h3>Table Of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-demo">The Demo</a></li>
+    <li><a href="#the-user-study">The User Study</a>
+      <ul>
+        <li><a href="#locomotion">Locomotion</a></li>
+        <li><a href="#interaction">Interaction</a></li>
+        <li><a href="#times">Times</a></li>
+        <li><a href="#suggestions-and-future-improvements">Suggestions and Future Improvements</a></li>
+      </ul>
+    </li>
+    <li><a href="#final-reflections">Final Reflections</a></li>
+  </ul>
+</nav></aside></div>
+  </div>
+</body>
+</html>

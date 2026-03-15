@@ -1,9 +1,146 @@
-<script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]'], ['$$', '$$']]
-      }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Toolkit - Manual, Prefabs, and Controls | Gravity</title>
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" /><meta property="og:url" content="https://mosouka.github.io/Gravity/posts/environment_prefabs/">
+  <meta property="og:site_name" content="Gravity">
+  <meta property="og:title" content="The Toolkit - Manual, Prefabs, and Controls">
+  <meta property="og:description" content="Controller Mapping The Prefabs The Spheres The final version of the spheres looks a bit different from the ones I mostly used during development.
+When I built the project on the Meta Quest, I had to optimize the spheres to run smoothly on the device. The visual effect I had originally chosen completely overwhelmed the Quest’s GPU, leading to a framerate of about zero (seriously, it was that bad).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-14T18:09:45+01:00">
+    <meta property="article:modified_time" content="2026-03-14T18:09:45+01:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Toolkit - Manual, Prefabs, and Controls">
+  <meta name="twitter:description" content="Controller Mapping The Prefabs The Spheres The final version of the spheres looks a bit different from the ones I mostly used during development.
+When I built the project on the Meta Quest, I had to optimize the spheres to run smoothly on the device. The visual effect I had originally chosen completely overwhelmed the Quest’s GPU, leading to a framerate of about zero (seriously, it was that bad).">
+
+      <link rel="stylesheet" href="/Gravity/css/root.min.0e732b812b9751962e01a7c4798a1211cd5f8ac8abec7f99793fe306989e459f.css" integrity="sha256-DnMrgSuXUZYuAafEeYoSEc1fisir7H&#43;ZeT/jBpieRZ8=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/Gravity/css/bundle.min.35b15f72eff61cbb106d05bab1ea1aebb778d0ba2861c763af0af0d80f43db4f.css" integrity="sha256-NbFfcu/2HLsQbQW6seoa67d40LooYcdjrwrw2A9D208=" crossorigin="anonymous">
+
+      <script src="/Gravity/js/bundle.cc8ae9952dbfb731affafabdf26e5c60a6910047ff59ccdeaf1daebaa26c8830.js" integrity="sha256-zIrplS2/tzGv&#43;vq98m5cYKaRAEf/Wczerx2uuqJsiDA=" crossorigin="anonymous"></script><script defer src="/Gravity/js/search/flexsearch.compact.3928d3d2172bc0b5f75d9458fb9255f0befce1c7239ba6e5d2c58ed4b82c2073.js" integrity="sha256-OSjT0hcrwLX3XZRY&#43;5JV8L784ccjm6bl0sWO1LgsIHM="></script>
+<script defer src="/Gravity/js/search/search.b50712055be50de28aabbe06f682d0442a48692f157d4de4533e483aaacd6061.js" integrity="sha256-tQcSBVvlDeKKq74G9oLQRCpIaS8VfU3kUz5IOqrNYGE="></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+</head>
+<body class="notransition">
+  <div id="container">
+    <header id="main-header"><div role="navigation" aria-label="Main">
+  <div class="nav-left">
+    <a href="https://mosouka.github.io/Gravity/" style="color: inherit;">Gravity</a>
+  </div>
+  <div class="nav-right">
+    <div style="position:absolute;width:0px;height:0px;">
+      <div id="nav-dropdown-menu" class="hidden" href="#">
+    <div class="nav-item">
+      <a aria-current="true" class="ancestor" href="/Gravity/posts/"
+      >Project</a>
+    </div>
+    <div class="nav-item">
+      <a href="/Gravity/climbing/"
+      >Reverse Classroom</a>
+    </div>
+</div>
+    </div>
+    <a id="nav-dropdown-button" href="#"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+    <div id="nav-menu">
+    <div class="nav-item">
+      <a aria-current="true" class="ancestor" href="/Gravity/posts/"
+      >Project</a>
+    </div>
+    <div class="nav-item">
+      <a href="/Gravity/climbing/"
+      >Reverse Classroom</a>
+    </div>
+</div>
+    <a id="theme-switcher" href="#">
+<svg class="light-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+<svg class="dark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+  </div>
+</div>
+</header>
+    <div class="flex grow">
+      <div id="main-pane">
+        <main id="main-content"><div class="single-header">
+<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://mosouka.github.io/Gravity/">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content='1' />
+    </li>
+    <span>&nbsp»&nbsp</span>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://mosouka.github.io/Gravity/posts/">
+        <span itemprop="name">Posts</span>
+      </a>
+      <meta itemprop="position" content='2' />
+    </li>
+    <span>&nbsp»&nbsp</span>
+</ol>
+<h1>The Toolkit - Manual, Prefabs, and Controls</h1><time class="dim" datetime="2026-03-14T18:09:45&#43;01:00">March 14, 2026</time></div>
+  <section class="page-section"><h2 id="controller-mapping">Controller Mapping</h2>
+<p><img src="controllers.png" alt="Controller Mapping"></p>
+<h2 id="the-prefabs">The Prefabs</h2>
+<h3 id="the-spheres">The Spheres</h3>
+<p>The final version of the spheres looks a bit different from the ones I mostly used during development.</p>
+<p><img src="LeftSphere.png" alt="Left Sphere">
+<img src="RightSphere.png" alt="Right Sphere"></p>
+<p>When I built the project on the Meta Quest, I had to optimize the spheres to run smoothly on the device. The visual effect I had originally chosen completely overwhelmed the Quest&rsquo;s GPU, leading to a framerate of about zero (seriously, it was that bad).</p>
+<p>To fix this, I had to use something performance friendly. Luckily I found <a href="https://assetstore.unity.com/packages/vfx/black-hole-effect-356686">this</a> black hole effect on the Unity Asset Store, which was perfect for my needs. I simply changed the colors to match my theme. The result was a significant improvement in performance while still maintaining a visually interesting design for the spheres.</p>
+<h3 id="the-ray-guns">The Ray Guns</h3>
+<p>To implement the first variation of the sphere spawner, I was looking for youtube tutorials and chanced upon <a href="https://www.youtube.com/watch?v=CcJ4yMTzXUM&amp;t=1515s">this</a> video. While I didn&rsquo;t end up using his code, I later remembered it when I decided to go for the gun metapher for the final version. In his video, he referenced a free <a href="https://sketchfab.com/3d-models/50s-style-ray-gun-42b7288de197481292cc0f511f84a0dc">gun model</a> on Sketchfab, which I downloaded and used for my ray guns. The model came in red, so I needed to do some very professional photoshopping to create a blue material for the right hand, which is why the blue gun looks a bit worse than the red one.</p>
+<p><img src="guns.png" alt="Ray Guns"></p>
+<h2 id="environment-parkour-course">Environment: Parkour Course</h2>
+<p>In our class, we were provided with the environment shown in the image below.</p>
+<p><img src="map.png" alt="Parkour Course"></p>
+<p>The parkour course has three sections: A straight, winding path, a zig-zag path with an uphill slope, and a final final sprint that first goas downhill and then curving into a jump. The course is designed to test the player&rsquo;s ability to navigate through different types of terrain and obstacles.</p>
+<p>In each section, players can also collect coins, which are quite challenging to collect with the gravity-spheres, as they require precise control and timing to reach. The coins serve as an additional challenge and incentive for players to master the locomotion system. I must admit that during my practice runs, I often gave up on collecting them and instead tried to clear each section as quickly as possible.</p>
+<p>The interaction task is at the end of each section.</p>
+<p>Next post: <a href="https://mosouka.github.io/Gravity/posts/user-study/">The Final Experience - Demo and User Study</a></p>
+</section></main>
+        <footer id="main-footer"><div class="footer">
+  <a href="#">Scroll to Top</a>
+  <div class="footer-copyright">
+    <div class="dim">© 2026 </div>
+    <div>Made with ❤️ and powered by <a href="https://github.com/math-queiroz/rusty-typewriter" target="_blank">Rusty Typewriter</a> theme for <a href="https://gohugo.io/" target="_blank">Hugo</a></div>
+  </div>
+</div>
+</footer>
+      </div><aside id="side-pane" class="side-sticky"><div class="side-details">
+    <span>384 words</span>
+    <span>2 - 3 minutes read</span></div><h3>Table Of Contents</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#controller-mapping">Controller Mapping</a></li>
+    <li><a href="#the-prefabs">The Prefabs</a>
+      <ul>
+        <li><a href="#the-spheres">The Spheres</a></li>
+        <li><a href="#the-ray-guns">The Ray Guns</a></li>
+      </ul>
+    </li>
+    <li><a href="#environment-parkour-course">Environment: Parkour Course</a></li>
+  </ul>
+</nav><h3>Attachments</h3>
+    <ul><li><a href="https://mosouka.github.io/Gravity/posts/environment_prefabs/LeftSphere.jpg">LeftSphere.jpg</a></li><li><a href="https://mosouka.github.io/Gravity/posts/environment_prefabs/RightSphere.jpg">RightSphere.jpg</a></li><li><a href="https://mosouka.github.io/Gravity/posts/environment_prefabs/controllers.png">controllers.png</a></li><li><a href="https://mosouka.github.io/Gravity/posts/environment_prefabs/guns.png">guns.png</a></li><li><a href="https://mosouka.github.io/Gravity/posts/environment_prefabs/map.png">map.png</a></li></ul></aside></div>
+  </div>
+</body>
+</html>

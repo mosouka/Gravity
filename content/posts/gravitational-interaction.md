@@ -46,10 +46,9 @@ The gravitational spheres themselves also had an iterative tweaking process to m
 Initially, the rigidbody's velocity would be set to zero once the player got close enough to the sphere ($r^2 < 1e-6$). I thought this could be a good way to have the player "land", stop their movement and then move on from there. However, this also slowed down movement. During one of the discussions in class, my professor suggested I could use a trigger collider or time-limited spheres. Comparing the two, the trigger collider makes the movement so much smoother and faster, especially because "collecting" the sphere allows for quicker successive movements. 
 
 ### Gravitational Softening
-I was telling a friend (and one of the people that participated in the user study) that there was a catapulting effect when passing through the center of a gravitational sphere, which felt uncontrollable to me. He suggested using a softening constant to the force calculation. So, I took to Perplexity, telling it to add gravitational softening to my code. Perplexity implemented a Plummer-like softening, which is apparently also used in galactic simulations. For anyone interested, this is the equation:
-$$F = G \frac{m_1 m_2}{(r^2 + \epsilon^2)^{3/2}}$$
+I was telling a friend (and one of the people that participated in the user study) that there was a catapulting effect when passing through the center of a gravitational sphere, which felt uncontrollable to me. He suggested using a softening constant to the force calculation. So, I took to Perplexity, telling it to add gravitational softening to my code. Perplexity implemented a Plummer-like softening, which is apparently also used in galactic simulations.
 
-Where $\epsilon$ is the softening constant. This adjustment significantly reduced the "catapulting" effect, making the movement feel more controlled and less prone to wild oscillations.
+This adjustment significantly reduced the "catapulting" effect, making the movement feel more controlled and less prone to wild oscillations.
 
 ### Force Amplification
 During my final presentation and first game demo, my professor and classmates gave me the feedback that the start of the acceleration felt very (too) slow. So, I added an amplification factor, so that accerlation starts faster even with small masses and larger distances. While my desire to make a physically accurate simulation was strong, I also wanted the system to be fun and feel good to use.
