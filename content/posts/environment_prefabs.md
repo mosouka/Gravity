@@ -5,7 +5,8 @@ title = 'The Toolkit - Manual, Prefabs, and Controls'
 topics = ['implementation']
 +++
 ## Controller Mapping
-{{< figure src="/images/controllers.png" alt="Controller Mapping" >}}
+{{< figure src="/images/controllers.png" title="Controller Mapping" >}}
+
 
 ## The Prefabs
 
@@ -28,7 +29,7 @@ To implement the first variation of the sphere spawner, I was looking for youtub
 ## Environment: Parkour Course
 In our class, we were provided with the environment shown in the image below.
 
-!(Parkour Course)(map.png)
+![(Parkour Course)](map.png)
 
 The parkour course has three sections: A straight, winding path, a zig-zag path with an uphill slope, and a final final sprint that first goas downhill and then curving into a jump. The course is designed to test the player's ability to navigate through different types of terrain and obstacles.
 
