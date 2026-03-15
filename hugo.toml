@@ -46,9 +46,6 @@ theme = 'rusty-typewriter'
  summaryLength = 1
  math = false
 
-canonifyURLs = true
-relativeURLs = false
-
 [params.links]
  hugo = 'https://gohugo.io/'
  theme = 'https://github.com/math-queiroz/rusty-typewriter'
