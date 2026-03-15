@@ -56,8 +56,7 @@ As part of the parkour mechanics, the completion time for the sections and the i
 | Task 2         | 2.5s, 0.01 error    | 3.5s, 0.00 error    |
 | Section 3      | 77.2, 21/23  coins  | ⁠131.1s, 23/23 coins |
 | Task 3         | 2.1s, 0.01 error    | 8.0s, 0.00 error    |
-| -------------- | ------------------- | ------------------- |
-| Total Sections | 278.6, 65/69 coins  | 375.9s, 68/69 coins |
+| **Total Sections** | **278.6, 65/69 coins**  | **375.9s, 68/69 coins** |
 
 ### Suggestions and Future Improvements
 While one person liked the system the way it is, another noted "Prevent the object interaction from being exploited as a simple grab. And maybe decrease defaul force field size.". When I personally tested the system, I frankly didn't notice the interaction system could be exploited like that. I was fully aware of the lcomotion system's potential exploitations, but this came as a surprise. The participant later texted me that I could implement a distance limit for the ray interaction, so that you can only pick up the object if you are far enough away from it. This would prevent the "grabbing" exploit, where you could do a simple grab. 
