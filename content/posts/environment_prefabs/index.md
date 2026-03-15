@@ -5,7 +5,7 @@ title = 'The Toolkit - Manual, Prefabs, and Controls'
 topics = ['implementation']
 +++
 ## Controller Mapping
-![Controller Mapping](/images/controllers.png)
+![Controller Mapping](controllers.png)
 
 
 ## The Prefabs
@@ -13,8 +13,8 @@ topics = ['implementation']
 ### The Spheres
 The final version of the spheres looks a bit different from the ones I mostly used during development.
 
-![Left Sphere](/images/LeftSphere.png)
-![Right Sphere](/images/RightSphere.png)
+![Left Sphere](LeftSphere.png)
+![Right Sphere](RightSphere.png)
 
 When I built the project on the Meta Quest, I had to optimize the spheres to run smoothly on the device. The visual effect I had originally chosen completely overwhelmed the Quest's GPU, leading to a framerate of about zero (seriously, it was that bad).
 
