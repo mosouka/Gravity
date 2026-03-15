@@ -1,7 +1,0 @@
-{{- template "_internal/opengraph.html" . -}}
-{{- template "_internal/twitter_cards.html" . -}}
-{{- partialCached "head/css.html" . -}}
-{{- partialCached "head/js.html" . -}}
-{{- if or .Site.Params.math .Params.math -}}
-  {{- partial "math.html" . -}}
-{{- end -}}

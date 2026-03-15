@@ -13,7 +13,7 @@ I implemented two spawners Blue (Right) and Red (Left), each managing one gravit
 
 A key technical challenge was managing the player’s relationship with "normal" world gravity. For the spheres to work effectively, I had to ensure the default Unity gravity didn't interfere. To do this, I consulted Perplexity to implement a tracker to monitor the active spheres:
 
-1. Activation: When a sphere is spawned via the trigger, a counter increases and the player Rigidbody’s useGravity is set to false.
+1. Activation: When a sphere is spawned via the trigger, a counter increases and the player Rigidbody’s `useGravity` is set to false.
 
 2. Persistence: As long as at least one sphere is active, global gravity stays off. This allows for the "slingshot" effect, where you whip past a sphere's center.
 
