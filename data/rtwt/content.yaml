@@ -5,5 +5,10 @@ side:
   home:
   - title: 'About Me'
     content: "Hey there. My name is Cosima and I'm a Computer Science master's student at TU Darmstadt."
-  - content: "Get the apk for Project Gravity [here](https://drive.google.com/drive/folders/1Z0_A6ijKWiX7yUVvzkR7BtGj8sU3S1xA?usp=sharing)"
+  - content: "Get the apk for Project Gravity"
+    url: "https://drive.google.com/drive/folders/1Z0_A6ijKWiX7yUVvzkR7BtGj8sU3S1xA?usp=sharing"
   - content: "This way to the GitHUb repository for the project." 
+single:
+  - title: 'Links'
+    content: Gravity.apk
+    url: "https://drive.google.com/drive/folders/1Z0_A6ijKWiX7yUVvzkR7BtGj8sU3S1xA?usp=sharing"
