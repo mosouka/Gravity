@@ -5,7 +5,7 @@ title = 'The Toolkit - Manual, Prefabs, and Controls'
 topics = ['implementation']
 +++
 ## Controller Mapping
-![Controller Mapping](/images/controllers.png)
+![Controller Mapping](images/controllers.png)
 
 ## The Prefabs
 
