@@ -4,6 +4,7 @@ draft = false
 title = 'The Final Experience - Demo and User Study'
 +++
 ## The Demo
+{{< youtube K8EPBnRTFdg  >}}
 
 ## The User Study
 With the implementation complete, I was ready to test the experience with real users. I conducted a small user study with 3 participants to gather feedback on the locomotion and interaction systems. The study consisted of two parts: users testing out the parkour, followed by a (not so) short questionnaire I had generated to get some more structured feedback. 
@@ -48,15 +49,15 @@ All participants thought that the interaction system was easy to learn (3), and 
 ### Times
 As part of the parkour mechanics, the completion time for the sections and the interaction tasks were also recorded. I forgot to write down the times for one of the participants, but I do have the times for the other two.
 
-| Parkour        | Participant 2       | Participant 3       |
-| -------------- | ------------------- | ------------------- |
-| Section 1      | 105.3s, 14/16 coins | 128.5s, 15/16 coins |
-| Task 1         | 2.5s, 0.01 error    | 4.7s, 0.00 error    |
-| Section 2      | 96.0s, 30/30 coins  | 116.3s, 30/30 coins |
-| Task 2         | 2.5s, 0.01 error    | 3.5s, 0.00 error    |
-| Section 3      | 77.2, 21/23  coins  | ⁠131.1s, 23/23 coins |
-| Task 3         | 2.1s, 0.01 error    | 8.0s, 0.00 error    |
-| **Total Sections** | **278.6, 65/69 coins**  | **375.9s, 68/69 coins** |
+| Parkour        | Participant 2       | Participant 3       | Me |
+| -------------- | ------------------- | ------------------- | ------------------- | 
+| Section 1      | 105.3s, 14/16 coins | 128.5s, 15/16 coins | 144.9s, 4/16 coins  |
+| Task 1         | 2.5s, 0.01 error    | 4.7s, 0.00 error    | 10.8s, 0.00 error   |
+| Section 2      | 96.0s, 30/30 coins  | 116.3s, 30/30 coins | 101.2s, 16/30 coins |
+| Task 2         | 2.5s, 0.01 error    | 3.5s, 0.00 error    | 7.9s, 0.00 error    |
+| Section 3      | 77.2, 21/23  coins  | ⁠131.1s, 23/23 coins | 83.6s, 18/23 coins  |
+| Task 3         | 2.1s, 0.01 error    | 8.0s, 0.00 error    | 7.4s, 0.00 error    |
+| **Total Sections** | **278.6, 65/69 coins**  | **375.9s, 68/69 coins** | 329.7s, 38/69 coins |
 
 ### Suggestions and Future Improvements
 While one person liked the system the way it is, another noted "Prevent the object interaction from being exploited as a simple grab. And maybe decrease defaul force field size.". When I personally tested the system, I frankly didn't notice the interaction system could be exploited like that. I was fully aware of the lcomotion system's potential exploitations, but this came as a surprise. The participant later texted me that I could implement a distance limit for the ray interaction, so that you can only pick up the object if you are far enough away from it. This would prevent the "grabbing" exploit, where you could do a simple grab. 
