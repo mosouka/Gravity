@@ -1,3 +1,5 @@
+title: "Gravity"
+link: "https://example.com"
 home:
   greetings: 'Welcome To My Blog!'
   text: 'In this blog, I share my progress and thought process on an HCI project I was assigned for my university course'
@@ -5,7 +7,7 @@ side:
   home:
   - title: 'About Me'
     content: "Hey there. My name is Cosima and I'm a Computer Science master's student at TU Darmstadt."
-  - content: "Get the apk for Project Gravity"
+  - content: "apk"
     url: "https://drive.google.com/drive/folders/1Z0_A6ijKWiX7yUVvzkR7BtGj8sU3S1xA?usp=sharing"
   - content: "This way to the GitHUb repository for the project." 
 single:
