@@ -45,6 +45,8 @@ To keep the UI clean and focused on the gravity spheres, the interaction rays ar
 
   * The Precision Logic: When both rays are attached to the object, the object's position is fixed (stored). The user can then use both hands to "twist" or rotate the object around its center. This separation of translation and rotation allowed for the exact precision needed to match the target ghost-shape.
 
+{{< youtube 7EnEj26gays >}}
+
 
 The interaction task was by far my biggest challenge, and I went through several iterations and ideas before landing on the ray gun approach. While it was a bit of a pivot from my original idea of using gravity for interaction, I am happy with the final result. The ray gun system felt much more controllable, and I think it still fits a sci-fi/space theme.
 
