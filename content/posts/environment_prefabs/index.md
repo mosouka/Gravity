@@ -17,7 +17,8 @@ When I built the project for the Meta Quest, I had to optimize the spheres to ru
 
 To fix this, I had to switch to something more performance-friendly. Luckily, I found [this](https://assetstore.unity.com/packages/vfx/black-hole-effect-356686) black hole effect on the Unity Asset Store, which was perfect for my needs. I simply changed the colors to match my theme. The result was a significant improvement in performance while still maintaining a visually interesting design for the spheres.
 
-![Left Sphere](LeftSphere.png)![Right Sphere](RightSphere.png)
+![Left Sphere](LeftSphere.png)
+![Right Sphere](RightSphere.png)
 
 ### The Ray Guns
 To implement the first variation of the sphere spawner, I was looking through YouTube tutorials and came across [this](https://www.youtube.com/watch?v=CcJ4yMTzXUM&t=1515s) video. While I didn’t end up using his code, I later remembered it when I decided to go for the gun metaphor in the final version. In the video, he referenced a free [gun model](https://sketchfab.com/3d-models/50s-style-ray-gun-42b7288de197481292cc0f511f84a0dc) on Sketchfab, which I downloaded and used for my ray guns. The model came in red, so I had to do some very professional Photoshopping to create a blue material for the right hand, which is why the blue gun looks a bit worse than the red one.
