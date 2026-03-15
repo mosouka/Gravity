@@ -1,11 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://mosouka.github.io/Gravity/'
 languageCode = 'en-us'
 title = 'Gravity'
 theme = 'rusty-typewriter'
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
 
 [rusty_typewriter]
  [params.rtwt]
@@ -48,7 +44,7 @@ theme = 'rusty-typewriter'
 
 [params]
  summaryLength = 1
- math = true
+ math = false
 
 [params.links]
  hugo = 'https://gohugo.io/'

@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Gravity</title>
-    <link>https://example.org/posts/</link>
+    <link>https://mosouka.github.io/Gravity/posts/</link>
     <description>Recent content in Posts on Gravity</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Mar 2026 12:57:45 +0100</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mosouka.github.io/Gravity/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Final Experience - Demo and User Study</title>
-      <link>https://example.org/posts/user-study/</link>
+      <link>https://mosouka.github.io/Gravity/posts/user-study/</link>
       <pubDate>Sun, 15 Mar 2026 12:57:45 +0100</pubDate>
-      <guid>https://example.org/posts/user-study/</guid>
+      <guid>https://mosouka.github.io/Gravity/posts/user-study/</guid>
       <description>&lt;h2 id=&#34;the-demo&#34;&gt;The Demo&lt;/h2&gt;&#xA;&lt;h2 id=&#34;the-user-study&#34;&gt;The User Study&lt;/h2&gt;&#xA;&lt;p&gt;With the implementation complete, I was ready to test the experience with real users. I conducted a small user study with 3 participants to gather feedback on the locomotion and interaction systems. The study consisted of two parts: users testing out the parkour, followed by a (not so) short questionnaire I had generated to get some more structured feedback.&lt;/p&gt;&#xA;&lt;p&gt;The questionnaire included the following questions:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Toolkit - Manual, Prefabs, and Controls</title>
-      <link>https://example.org/posts/env_prefabs/environment_prefabs/</link>
+      <link>https://mosouka.github.io/Gravity/posts/env_prefabs/environment_prefabs/</link>
       <pubDate>Sat, 14 Mar 2026 18:09:45 +0100</pubDate>
-      <guid>https://example.org/posts/env_prefabs/environment_prefabs/</guid>
+      <guid>https://mosouka.github.io/Gravity/posts/env_prefabs/environment_prefabs/</guid>
       <description>&lt;h2 id=&#34;controller-mapping&#34;&gt;Controller Mapping&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;controllers.png&#34; alt=&#34;Controller Mapping&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-prefabs&#34;&gt;The Prefabs&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-spheres&#34;&gt;The Spheres&lt;/h3&gt;&#xA;&lt;p&gt;The final version of the spheres looks a bit different from the ones I mostly used during development.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;LeftSphere.png&#34; alt=&#34;Left Sphere&#34;&gt;&#xA;&lt;img src=&#34;RightSphere.png&#34; alt=&#34;Right Sphere&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;When I built the project on the Meta Quest, I had to optimize the spheres to run smoothly on the device. The visual effect I had originally chosen completely overwhelmed the Quest&amp;rsquo;s GPU, leading to a framerate of about zero (seriously, it was that bad).&lt;/p&gt;</description>
     </item>
     <item>
       <title>The T-Shape Challenge</title>
-      <link>https://example.org/posts/t-shape/</link>
+      <link>https://mosouka.github.io/Gravity/posts/t-shape/</link>
       <pubDate>Wed, 11 Mar 2026 12:00:00 +0100</pubDate>
-      <guid>https://example.org/posts/t-shape/</guid>
+      <guid>https://mosouka.github.io/Gravity/posts/t-shape/</guid>
       <description>&lt;p&gt;Being satisfied with my locomotion system, it was time to tackle the interaction task. The goal: Manipulate a T-shaped object to match a target T-shape shape in 3D space. This requires both precise translation (positioning) and rotation.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-failure-of-gravity&#34;&gt;The Failure of Gravity&lt;/h2&gt;&#xA;&lt;h3 id=&#34;gravity-hands&#34;&gt;Gravity Hands&lt;/h3&gt;&#xA;&lt;p&gt;My first idea for the interaction was to implement &amp;ldquo;Gravity Hands&amp;rdquo;. The player&amp;rsquo;s hand would act as localized gravity sources that could pull objects towards them. I thought that this would be a natural extension of the gravitational locomotion system, allowing for a consistent interaction paradigm. The player could use their hands towards them and have the T-Shape follow. For rotation, they could &amp;ldquo;pull&amp;rdquo; from both sides to have the T-shape lavitate in the center and then rotate it by moving one hand around the other.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Gravitational Interaction</title>
-      <link>https://example.org/posts/gravitational-interaction/</link>
+      <link>https://mosouka.github.io/Gravity/posts/gravitational-interaction/</link>
       <pubDate>Mon, 09 Mar 2026 15:23:05 +0100</pubDate>
-      <guid>https://example.org/posts/gravitational-interaction/</guid>
+      <guid>https://mosouka.github.io/Gravity/posts/gravitational-interaction/</guid>
       <description>&lt;p&gt;Once the core physics were verified, the project moved from a single-script test into a functional VR traversal system. This required building a robust &amp;ldquo;hand&amp;rdquo; system and a way to manage the state of the world&amp;rsquo;s gravity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;spawning-and-controlling-the-spheres&#34;&gt;Spawning and Controlling the Spheres&lt;/h2&gt;&#xA;&lt;p&gt;I implemented two spawners Blue (Right) and Red (Left), each managing one gravity sphere. In my final iteration, these spawners were conceptualized as ray guns. This introduces a specific tactical layer to the locomotion: you can have two forces acting on you simultaneously, allowing for smoother locomotion and more complex trajectories.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Idea</title>
-      <link>https://example.org/posts/the-idea/</link>
+      <link>https://mosouka.github.io/Gravity/posts/the-idea/</link>
       <pubDate>Tue, 09 Dec 2025 10:45:45 +0100</pubDate>
-      <guid>https://example.org/posts/the-idea/</guid>
+      <guid>https://mosouka.github.io/Gravity/posts/the-idea/</guid>
       <description>&lt;h2 id=&#34;introduction-the-hci-challenge&#34;&gt;Introduction: The HCI Challenge&lt;/h2&gt;&#xA;&lt;p&gt;For my &amp;ldquo;Interaction in Virtual and Artifical Reality&amp;rdquo; class, we were assigned to develop a novel and creative way to interact and move in VR/AR. We were completely free in choosing what to do and how to do it. We could freely choose how to go about challenges like presence, motion sickness, interactivity, story line, and so on.&lt;/p&gt;&#xA;&lt;p&gt;Not being the most creative person, I had some trouble coming up with an idea at first. After a while, I had the idea of implementing a kind of Human: Fall Flat style locomotion and interaction system, as I remember it as a very fun but challenging game. It had the added benefit that climbing is a great way to avoid cyber sickness. But this idea was not quite original, as it wasn&amp;rsquo;t my own. So I talked to everyone I thought could have good ideas.&lt;/p&gt;</description>
     </item>
   </channel>

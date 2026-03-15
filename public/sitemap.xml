@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/</loc>
+    <loc>https://mosouka.github.io/Gravity/</loc>
     <lastmod>2026-03-15T12:57:45+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://mosouka.github.io/Gravity/posts/</loc>
     <lastmod>2026-03-15T12:57:45+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/user-study/</loc>
+    <loc>https://mosouka.github.io/Gravity/posts/user-study/</loc>
     <lastmod>2026-03-15T12:57:45+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/env_prefabs/environment_prefabs/</loc>
+    <loc>https://mosouka.github.io/Gravity/posts/env_prefabs/environment_prefabs/</loc>
     <lastmod>2026-03-14T18:09:45+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/t-shape/</loc>
+    <loc>https://mosouka.github.io/Gravity/posts/t-shape/</loc>
     <lastmod>2026-03-11T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/gravitational-interaction/</loc>
+    <loc>https://mosouka.github.io/Gravity/posts/gravitational-interaction/</loc>
     <lastmod>2026-03-09T15:23:05+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/climbing/</loc>
+    <loc>https://mosouka.github.io/Gravity/climbing/</loc>
     <lastmod>2026-02-25T18:09:45+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/the-idea/</loc>
+    <loc>https://mosouka.github.io/Gravity/posts/the-idea/</loc>
     <lastmod>2025-12-09T10:45:45+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://mosouka.github.io/Gravity/tags/</loc>
   </url>
 </urlset>
