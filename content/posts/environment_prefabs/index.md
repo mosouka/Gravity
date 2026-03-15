@@ -23,13 +23,13 @@ To fix this, I had to use something performance friendly. Luckily I found [this]
 ### The Ray Guns
 To implement the first variation of the sphere spawner, I was looking for youtube tutorials and chanced upon [this](https://www.youtube.com/watch?v=CcJ4yMTzXUM&t=1515s) video. While I didn't end up using his code, I later remembered it when I decided to go for the gun metapher for the final version. In his video, he referenced a free [gun model](https://sketchfab.com/3d-models/50s-style-ray-gun-42b7288de197481292cc0f511f84a0dc) on Sketchfab, which I downloaded and used for my ray guns. The model came in red, so I needed to do some very professional photoshopping to create a blue material for the right hand, which is why the blue gun looks a bit worse than the red one.
 
-![Ray Guns](/images/guns.png)
+![Ray Guns](guns.png)
 
 
 ## Environment: Parkour Course
 In our class, we were provided with the environment shown in the image below.
 
-![Parkour Course](/images/map.png)
+![Parkour Course](map.png)
 
 The parkour course has three sections: A straight, winding path, a zig-zag path with an uphill slope, and a final final sprint that first goas downhill and then curving into a jump. The course is designed to test the player's ability to navigate through different types of terrain and obstacles.
 
