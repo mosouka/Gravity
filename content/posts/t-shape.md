@@ -48,4 +48,4 @@ To keep the UI clean and focused on the gravity spheres, the interaction rays ar
 
 The interaction task was by far my biggest challenge, and I went through several iterations and ideas before landing on the ray gun approach. While it was a bit of a pivot from my original idea of using gravity for interaction, I am happy with the final result. The ray gun system felt much more controllable, and I think it still fits a sci-fi/space theme.
 
-Next Chapter: Putting it all together - the final user experience and the user study.
+Next post: [The Toolkit - Manual, Prefabs, and Controls]({{<ref environment_prefabs >}})
