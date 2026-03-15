@@ -3,8 +3,6 @@ date = '2025-12-09T10:45:45+01:00'
 draft = false
 title = 'The Idea'
 featured = true
-[params]
-  math = true
 +++
 ## Introduction: The HCI Challenge
 For my "Interaction in Virtual and Artifical Reality" class, we were assigned to develop a novel and creative way to interact and move in VR/AR. We were completely free in choosing what to do and how to do it. We could freely choose how to go about challenges like presence, motion sickness, interactivity, story line, and so on.
@@ -12,12 +10,15 @@ For my "Interaction in Virtual and Artifical Reality" class, we were assigned to
 I had some trouble coming up with an idea at first. After a while, I had the idea of implementing a kind of Human: Fall Flat style locomotion and interaction system, as I remember it as a very fun but challenging game. It had the added benefit that climbing is a great way to avoid cyber sickness. But this idea was not quite original, as it wasn't my own. So I talked to everyone I thought could have good ideas.
 
 ## The Spark: A Lunch with my Dad
-One day, I was having lunch with my dad, and I told him about the project. He is a physicist, and I thought he might have some interesting ideas. He suggested that I could use the concept of gravity to create a new way of moving in VR. He explained that an exponential increase in velocity could be a fun way to move in VR. Thruth be told, I didn't completely understand it at first, but it sounded like it could be fun. However, I knew there would be a huge trade-off with motion sickness, so I wasn't completely sold on it. But because the idea was actually novel, I decided to pitch it to my professor. He seemed to like it, and I decided to build a prototype to see if it would work.
+One day, I was having lunch with my dad, and I told him about the project. He is a physicist, and I thought he might have some interesting ideas. He suggested that I could use the concept of gravity to create a new way of moving in VR. He explained that an exponential increase in velocity could be a fun way to move in VR. Truth be told, I didn't completely understand it at first, but it sounded like it could be fun. However, I knew there would be a huge trade-off with motion sickness, so I wasn't completely sold on it. But because the idea was actually novel, I decided to pitch it to my professor. He seemed to like it, and I decided to build a prototype to see if it would work.
 
 ## The Blueprint: Localized Gravity Spheres
-The player is able to spawn one gravitational sphere per hand: blue = right, and red = left. Based on Newton's Law of Gravitational Force, the player is pulled towards the active sphere with a force proportional to 1/r^2, where r is the distance between the player and the sphere. The player can move by placing the sphere in different locations, using the law of gravity to traverse the environment, like a space explorer using gravity assists to slingshot around planets.
+The player is able to spawn one gravitational sphere per hand: Blue (Right) and Red (Left). Based on Newton's Law of Gravitational Force, the player is pulled towards the active sphere with a force proportional to 1/r2, where r is the distance between the player and the sphere.
+
+The player can move by placing the sphere in different locations, using the law of gravity to traverse the environment. Much like a space explorer using gravity assists to slingshot around planets.
 
 ## The first Prototype: Core Gravitational Interaction
+*Note: During the development and debugging of the C# scripts for this project, I utilized LLMs (specifically Perplexity and ChatGPT).*
 ```
 public class GravitationalField : MonoBehaviour
 {
@@ -44,11 +45,13 @@ public class GravitationalField : MonoBehaviour
 
         Vector3 forceDirection = toCenter.normalized; // Normalize the direction vector
 
-        rigidbody.AddForce((mass / (distance * distance))* forceDirection, forceMode.Acceleration); // Apply gravitational force
+        rigidbody.AddForce((mass / (distance * distance))* forceDirection, ForceMode.Acceleration); // Apply gravitational force
     }
 }
 ```
-For the gravitational sphere to control the motion, I first had to disable the Rigidbody’s built‑in gravity; otherwise, the default global gravity would dominate and interfere with the effect of the sphere. The gravitational force is applied in FixedUpdate, which runs at a fixed time step and is therefore better suited for physics calculations than the regular Update loop. Each frame, the script computes the direction and distance to the sphere’s center, calculates the force magnitude as proportional to $1/r^22$, and then applies it to the character’s Rigidbody using AddForce. Inside a small inner radius, the character is simply stopped to avoid unstable behavior very close to the center.
+For the gravitational sphere to control the motion, I first had to disable the Rigidbody’s built‑in gravity; otherwise, the default global gravity would dominate. The gravitational force is applied in `FixedUpdate`. Each frame, the script computes the direction and distance to the sphere’s center, calculates the force magnitude, and then applies it to the character’s Rigidbody using `ForceMode.Acceleration`.
+
+Inside a small inner radius, the character is simply stopped to avoid the "infinite force" spike that occurs as r approaches zero, preventing unstable behavior at the center.
 
 {{< youtube dDaV9fnUTUE  >}}
 

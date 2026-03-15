@@ -102,10 +102,12 @@ I had some trouble coming up with an idea at first. After a while, I had the ide
 <p>For my &ldquo;Interaction in Virtual and Artifical Reality&rdquo; class, we were assigned to develop a novel and creative way to interact and move in VR/AR. We were completely free in choosing what to do and how to do it. We could freely choose how to go about challenges like presence, motion sickness, interactivity, story line, and so on.</p>
 <p>I had some trouble coming up with an idea at first. After a while, I had the idea of implementing a kind of Human: Fall Flat style locomotion and interaction system, as I remember it as a very fun but challenging game. It had the added benefit that climbing is a great way to avoid cyber sickness. But this idea was not quite original, as it wasn&rsquo;t my own. So I talked to everyone I thought could have good ideas.</p>
 <h2 id="the-spark-a-lunch-with-my-dad">The Spark: A Lunch with my Dad</h2>
-<p>One day, I was having lunch with my dad, and I told him about the project. He is a physicist, and I thought he might have some interesting ideas. He suggested that I could use the concept of gravity to create a new way of moving in VR. He explained that an exponential increase in velocity could be a fun way to move in VR. Thruth be told, I didn&rsquo;t completely understand it at first, but it sounded like it could be fun. However, I knew there would be a huge trade-off with motion sickness, so I wasn&rsquo;t completely sold on it. But because the idea was actually novel, I decided to pitch it to my professor. He seemed to like it, and I decided to build a prototype to see if it would work.</p>
+<p>One day, I was having lunch with my dad, and I told him about the project. He is a physicist, and I thought he might have some interesting ideas. He suggested that I could use the concept of gravity to create a new way of moving in VR. He explained that an exponential increase in velocity could be a fun way to move in VR. Truth be told, I didn&rsquo;t completely understand it at first, but it sounded like it could be fun. However, I knew there would be a huge trade-off with motion sickness, so I wasn&rsquo;t completely sold on it. But because the idea was actually novel, I decided to pitch it to my professor. He seemed to like it, and I decided to build a prototype to see if it would work.</p>
 <h2 id="the-blueprint-localized-gravity-spheres">The Blueprint: Localized Gravity Spheres</h2>
-<p>The player is able to spawn one gravitational sphere per hand: blue = right, and red = left. Based on Newton&rsquo;s Law of Gravitational Force, the player is pulled towards the active sphere with a force proportional to 1/r^2, where r is the distance between the player and the sphere. The player can move by placing the sphere in different locations, using the law of gravity to traverse the environment, like a space explorer using gravity assists to slingshot around planets.</p>
+<p>The player is able to spawn one gravitational sphere per hand: Blue (Right) and Red (Left). Based on Newton&rsquo;s Law of Gravitational Force, the player is pulled towards the active sphere with a force proportional to 1/r2, where r is the distance between the player and the sphere.</p>
+<p>The player can move by placing the sphere in different locations, using the law of gravity to traverse the environment. Much like a space explorer using gravity assists to slingshot around planets.</p>
 <h2 id="the-first-prototype-core-gravitational-interaction">The first Prototype: Core Gravitational Interaction</h2>
+<p><em>Note: During the development and debugging of the C# scripts for this project, I utilized LLMs (specifically Perplexity and ChatGPT).</em></p>
 <pre tabindex="0"><code>public class GravitationalField : MonoBehaviour
 {
     public float mass = 20f; // arbitrary mass of the sphere
@@ -131,10 +133,11 @@ I had some trouble coming up with an idea at first. After a while, I had the ide
 
         Vector3 forceDirection = toCenter.normalized; // Normalize the direction vector
 
-        rigidbody.AddForce((mass / (distance * distance))* forceDirection, forceMode.Acceleration); // Apply gravitational force
+        rigidbody.AddForce((mass / (distance * distance))* forceDirection, ForceMode.Acceleration); // Apply gravitational force
     }
 }
-</code></pre><p>For the gravitational sphere to control the motion, I first had to disable the Rigidbody’s built‑in gravity; otherwise, the default global gravity would dominate and interfere with the effect of the sphere. The gravitational force is applied in FixedUpdate, which runs at a fixed time step and is therefore better suited for physics calculations than the regular Update loop. Each frame, the script computes the direction and distance to the sphere’s center, calculates the force magnitude as proportional to $1/r^22$, and then applies it to the character’s Rigidbody using AddForce. Inside a small inner radius, the character is simply stopped to avoid unstable behavior very close to the center.</p>
+</code></pre><p>For the gravitational sphere to control the motion, I first had to disable the Rigidbody’s built‑in gravity; otherwise, the default global gravity would dominate. The gravitational force is applied in <code>FixedUpdate</code>. Each frame, the script computes the direction and distance to the sphere’s center, calculates the force magnitude, and then applies it to the character’s Rigidbody using <code>ForceMode.Acceleration</code>.</p>
+<p>Inside a small inner radius, the character is simply stopped to avoid the &ldquo;infinite force&rdquo; spike that occurs as r approaches zero, preventing unstable behavior at the center.</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dDaV9fnUTUE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
@@ -159,7 +162,7 @@ I had some trouble coming up with an idea at first. After a while, I had the ide
 </div>
 </footer>
       </div><aside id="side-pane" class="side-sticky"><div class="side-details">
-    <span>881 words</span>
+    <span>877 words</span>
     <span>5 - 6 minutes read</span></div><h3>Table Of Contents</h3><nav id="TableOfContents">
   <ul>
     <li><a href="#introduction-the-hci-challenge">Introduction: The HCI Challenge</a></li>

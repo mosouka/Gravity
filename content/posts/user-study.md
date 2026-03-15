@@ -77,6 +77,9 @@ While we were alone in our projects, we were never alone in our struggles. The c
 
 While I had a strong interest in HCI prior to taking this class, my interest has only been further fueled by this project. It makes me want to dive deeper into the field and explore, as well as research, more about this field of studies. Having a bachelor's degree in Cognitive Science, I believe that this area is one that can neatly combine my interests in both technology and human behavior, and I am excited to see where this interest will take me in the future.
 
-In any case, I am very happy with the final result of my project, and I am grateful for the opportunity to work on such a fun and creative project. While I didn't necessarily improve my non-existant programming skills, I believe I have learned a lot in both the class and my project. This wasn't my first rodea with VR and Unity, but I do believe that I have gained a deeper understanding of both technologies and hope to use this knowledge in future projects.
+In any case, I am very happy with the final result of my project, and I am grateful for the opportunity to work on such a fun and creative project. While I didn't necessarily improve my non-existant programming skills, I believe I have learned a lot in both the class and my project. This wasn't my first rodeo with VR and Unity, but I do believe that I have gained a deeper understanding of both technologies and hope to use this knowledge in future projects.
 
 Thank you to everyone who participated in the user study, and thank you to my professor and classmates for all the feedback and support throughout the project. It has been a great experience.
+
+### Technical Credits
+**Development Support**: LLMs (Perplexity, ChatGPT, Gemini) were used to develop and debug C# scripts.

@@ -43,7 +43,7 @@ To keep the UI clean and focused on the gravity spheres, the interaction rays ar
 
 * The Dual-Hand Pivot (Precision Mode): Rotation with one hand can be tricky, especially with guns in your hands. For a more "natural" feeling of rotating the shape with a ray, I implemented a Dual-Hand Control mode to solve this.
 
-  * The Precision Logic: When both rays are attached to the object, the object's position is fixed (stored). The user can then use both hands to "twist" or rotate the object around its center. This separation of translation and rotation allowed for the exact precision needed to match the target ghost-shape.
+  * The Precision Logic: When both rays are attached to the object, the object's position is fixed (stored). The user can then use both hands to "twist" or rotate the object around its center. This separation of translation and rotation allowed for the exact precision needed to match the target shape.
 
 {{< youtube 7EnEj26gays >}}
 

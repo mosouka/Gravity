@@ -37,13 +37,13 @@ Next, I added depth control. By moving the joystick in the Y-direction, the play
 I implemented scale manipulation via the joystick X-direction. Because the mass of the sphere is tied to its scale, making a sphere larger increases the gravitational pull. This gives the player "analog" control over their acceleration.
 
 ### 4. Shoot Animation
-Finally, because I added the guns for the final version, I thought a shooting animation would be nice touch. When pressing the Trigger, the sphere fires from the tip of the gun to the target position, scaling up from 5\% of its final size during flight.
+Finally, because I added the guns for the final version, I thought a shooting animation would be nice touch. When pressing the Trigger, the sphere fires from the tip of the gun to the target position, scaling up from 5% of its final size during flight.
 
 ## Refining the "Feel" of the Force
 The gravitational spheres themselves also had an iterative tweaking process to make locomotion smoother and feel more controllable.
 
 ### Stop?
-Initially, the rigidbody's velocity would be set to zero once the player got close enough to the sphere ($r^2 < 1e-6$). I thought this could be a good way to have the player "land", stop their movement and then move on from there. However, this also slowed down movement. During one of the discussions in class, my professor suggested I could use a trigger collider or time-limited spheres. Comparing the two, the trigger collider makes the movement so much smoother and faster, especially because "collecting" the sphere allows for quicker successive movements. 
+Initially, the rigidbody's velocity would be set to zero once the player got close enough to the sphere (r^2 < 1e-6). I thought this could be a good way to have the player "land", stop their movement and then move on from there. However, this also slowed down movement. During one of the discussions in class, my professor suggested I could use a trigger collider or time-limited spheres. Comparing the two, the trigger collider makes the movement so much smoother and faster, especially because "collecting" the sphere allows for quicker successive movements. 
 
 ### Gravitational Softening
 I was telling a friend (and one of the people that participated in the user study) that there was a catapulting effect when passing through the center of a gravitational sphere, which felt uncontrollable to me. He suggested using a softening constant to the force calculation. So, I took to Perplexity, telling it to add gravitational softening to my code. Perplexity implemented a Plummer-like softening, which is apparently also used in galactic simulations.
@@ -51,7 +51,7 @@ I was telling a friend (and one of the people that participated in the user stud
 This adjustment significantly reduced the "catapulting" effect, making the movement feel more controlled and less prone to wild oscillations.
 
 ### Force Amplification
-During my final presentation and first game demo, my professor and classmates gave me the feedback that the start of the acceleration felt very (too) slow. So, I added an amplification factor, so that accerlation starts faster even with small masses and larger distances. While my desire to make a physically accurate simulation was strong, I also wanted the system to be fun and feel good to use.
+During my final presentation and first game demo, my professor and classmates gave me the feedback that the start of the acceleration felt very (too) slow. So, I added an amplification factor, so that acceleration starts faster even with small masses and larger distances. While my desire to make a physically accurate simulation was strong, I also wanted the system to be fun and feel good to use.
 
 
 I can honestly say that I am quite happy with the result of my gravitational spheres and the spawning system. While it can be hard to control, it still feels very fun to me and I am happy I was able to make a (kind of) physically accurate gravity simulation, albeit with the help of my good friend Perplexity. It was also fun to experiment with the different parameters and see how they influenced the feel of the movement. While I didn't implement Human: Fall Flat, this locomotion system brings a similar sense of chaos.
