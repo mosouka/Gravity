@@ -1,5 +1,5 @@
 +++
-date = '2026-02-25T18:09:45+01:00'
+date = '2025-12-09T10:45:45+01:00'
 draft = false
 title = 'The Idea'
 featured = true

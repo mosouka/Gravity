@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Gravity</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Mar 2026 15:23:05 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 12:00:00 +0100</lastBuildDate>
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The T-Shape Challenge</title>
+      <link>https://example.org/posts/t-shape/</link>
+      <pubDate>Wed, 11 Mar 2026 12:00:00 +0100</pubDate>
+      <guid>https://example.org/posts/t-shape/</guid>
+      <description>&lt;p&gt;Being satisfied with my locomotion system, it was time to tackle the interaction task. The goal: Manipulate a T-shaped object to match a target T-shape shape in 3D space. This requires both precise translation (positioning) and rotation.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-failure-of-gravity&#34;&gt;The Failure of Gravity&lt;/h2&gt;&#xA;&lt;h3 id=&#34;gravity-hands&#34;&gt;Gravity Hands&lt;/h3&gt;&#xA;&lt;p&gt;My first idea for the interaction was to implement &amp;ldquo;Gravity Hands&amp;rdquo;. The player&amp;rsquo;s hand would act as localized gravity sources that could pull objects towards them. I thought that this would be a natural extension of the gravitational locomotion system, allowing for a consistent interaction paradigm. The player could use their hands towards them and have the T-Shape follow. For rotation, they could &amp;ldquo;pull&amp;rdquo; from both sides to have the T-shape lavitate in the center and then rotate it by moving one hand around the other.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Gravitational Interaction</title>
       <link>https://example.org/posts/gravitational-interaction/</link>
@@ -18,16 +25,9 @@
     <item>
       <title>The Idea</title>
       <link>https://example.org/posts/the-idea/</link>
-      <pubDate>Wed, 25 Feb 2026 18:09:45 +0100</pubDate>
+      <pubDate>Tue, 09 Dec 2025 10:45:45 +0100</pubDate>
       <guid>https://example.org/posts/the-idea/</guid>
       <description>&lt;h2 id=&#34;introduction-the-hci-challenge&#34;&gt;Introduction: The HCI Challenge&lt;/h2&gt;&#xA;&lt;p&gt;For my &amp;ldquo;Interaction in Virtual and Artifical Reality&amp;rdquo; class, we were assigned to develop a novel and creative way to interact and move in VR/AR. We were completely free in choosing what to do and how to do it. We could freely choose how to go about challenges like presence, motion sickness, interactivity, story line, and so on.&lt;/p&gt;&#xA;&lt;p&gt;Not being the most creative person, I had some trouble coming up with an idea at first. After a while, I had the idea of implementing a kind of Human: Fall Flat style locomotion and interaction system, as I remember it as a very fun but challenging game. It had the added benefit that climbing is a great way to avoid cyber sickness. But this idea was not quite original, as it wasn&amp;rsquo;t my own. So I talked to everyone I thought could have good ideas.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The T-Shape Challenge</title>
-      <link>https://example.org/posts/t-shape/</link>
-      <pubDate>Wed, 25 Feb 2026 18:09:45 +0100</pubDate>
-      <guid>https://example.org/posts/t-shape/</guid>
-      <description>&lt;p&gt;Being satisfied with my locomotion system, it was time to tackle the interaction task. The goal: Manipulate a T-shaped object to match a target T-shape shape in 3D space. This requires both precise translation (positioning) and rotation.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-failure-of-gravity&#34;&gt;The Failure of Gravity&lt;/h2&gt;&#xA;&lt;h3 id=&#34;gravity-hands&#34;&gt;Gravity Hands&lt;/h3&gt;&#xA;&lt;p&gt;My first idea for the interaction was to implement &amp;ldquo;Gravity Hands&amp;rdquo;. The player&amp;rsquo;s hand would act as localized gravity sources that could pull objects towards them. I thought that this would be a natural extension of the gravitational locomotion system, allowing for a consistent interaction paradigm. The player could use their hands towards them and have the T-Shape follow. For rotation, they could &amp;ldquo;pull&amp;rdquo; from both sides to have the T-shape lavitate in the center and then rotate it by moving one hand around the other.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
